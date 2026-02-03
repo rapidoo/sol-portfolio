@@ -42,8 +42,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Solène Le Bris" }],
   creator: "Solène Le Bris",
   icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
   },
   openGraph: {
     type: "website",

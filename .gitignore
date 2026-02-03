@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / AI tools
+.agents/
+.claude/
+.gemini/
+.windsurf/
+
+# Source files (already copied to public/assets)
+site web sol/
+CV Solene Le Bris.pdf

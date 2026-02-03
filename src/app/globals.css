@@ -1,26 +1,135 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #f8f6f1;
+  --charcoal: #1a1a1a;
+  --sol-orange: #ff8c42;
+  --sol-yellow: #ffd166;
+  --sol-pink: #ef476f;
+  --sol-purple: #9b5de5;
+  --sol-blue: #4361ee;
+  --sol-green: #06d6a0;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-charcoal: var(--charcoal);
+  --color-sol-orange: var(--sol-orange);
+  --color-sol-yellow: var(--sol-yellow);
+  --color-sol-pink: var(--sol-pink);
+  --color-sol-purple: var(--sol-purple);
+  --color-sol-blue: var(--sol-blue);
+  --color-sol-green: var(--sol-green);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--charcoal);
+  border-radius: 4px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection */
+::selection {
+  background: var(--sol-orange);
+  color: white;
+}
+
+/* Universe card hover effects */
+.universe-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.universe-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.universe-card:hover .universe-image {
+  transform: scale(1.1);
+}
+
+.universe-image {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Page transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Sun logo animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.sun-rotate:hover {
+  animation: rotate 8s linear infinite;
+}
+
+/* Magnetic button effect */
+.magnetic-btn {
+  transition: transform 0.3s ease-out;
+}
+
+/* Project image gallery */
+.project-gallery img {
+  transition: all 0.3s ease;
+}
+
+.project-gallery img:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }

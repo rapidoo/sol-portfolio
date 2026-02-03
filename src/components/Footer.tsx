@@ -68,6 +68,14 @@ export default function Footer() {
             <h4 className="font-medium mb-4">Contact</h4>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link
+                  href="/contact"
+                  className="text-cream/60 hover:text-sol-orange transition-colors"
+                >
+                  Formulaire de contact
+                </Link>
+              </li>
+              <li>
                 <a
                   href="mailto:sol.lebris26@gmail.com"
                   className="text-cream/60 hover:text-sol-orange transition-colors"

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -270,8 +271,8 @@ export default function AboutPage() {
             I&apos;m always open to new opportunities and creative
             collaborations.
           </p>
-          <a
-            href="mailto:sol.lebris26@gmail.com"
+          <Link
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-charcoal text-cream font-medium rounded-full hover:bg-sol-orange transition-colors"
           >
             Get in touch
@@ -288,7 +289,7 @@ export default function AboutPage() {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </a>
+          </Link>
         </section>
       </div>
 

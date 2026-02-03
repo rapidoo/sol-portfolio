@@ -49,12 +49,12 @@ export default function Navigation() {
             </li>
           ))}
           <li>
-            <a
-              href="mailto:sol.lebris26@gmail.com"
+            <Link
+              href="/contact"
               className="px-5 py-2 bg-charcoal text-cream text-sm font-medium rounded-full hover:bg-sol-orange transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -100,12 +100,12 @@ export default function Navigation() {
               </li>
             ))}
             <li>
-              <a
-                href="mailto:sol.lebris26@gmail.com"
+              <Link
+                href="/contact"
                 className="inline-block px-5 py-2 bg-charcoal text-cream text-sm font-medium rounded-full"
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
